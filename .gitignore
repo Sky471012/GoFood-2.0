@@ -1,0 +1,8 @@
+.env
+dist/
+.DS_Store
+*.log
+backend/.env
+backend/node_modules/
+node_modules/
+.vscode/
