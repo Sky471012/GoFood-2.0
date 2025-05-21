@@ -9,12 +9,12 @@ dotenv.config();
 mongoDB();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // allow your frontend origin
+  origin: 'https://go-food-2-0-git-main-sharmaaakash1012-gmailcoms-projects.vercel.app/', // allow your frontend origin
   credentials: true
 }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "https://go-food-2-0-git-main-sharmaaakash1012-gmailcoms-projects.vercel.app/");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
