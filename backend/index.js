@@ -9,12 +9,12 @@ dotenv.config();
 mongoDB();
 
 app.use(cors({
-  origin: 'https://go-food-2-0-a0afmxpqg-sharmaaakash1012-gmailcoms-projects.vercel.app', // allow your frontend origin
+  origin: 'https://go-food-2-0-9w5ori4xq-sharmaaakash1012-gmailcoms-projects.vercel.app', // allow your frontend origin
   credentials: true
 }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://go-food-2-0-a0afmxpqg-sharmaaakash1012-gmailcoms-projects.vercel.app");
+  res.setHeader("Access-Control-Allow-Origin", "https://go-food-2-0-9w5ori4xq-sharmaaakash1012-gmailcoms-projects.vercel.app");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
