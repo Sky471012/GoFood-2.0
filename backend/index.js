@@ -8,19 +8,7 @@ dotenv.config();
 
 mongoDB();
 
-app.use(cors({
-  origin: 'https://go-food-2-0.vercel.app/', // allow your frontend origin
-  credentials: true
-}));
-
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://go-food-2-0.vercel.app/");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
