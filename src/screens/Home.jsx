@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
-import Hero from '../components/hero';
+import Hero from '../components/Hero';
 
 export default function Home() {
 
