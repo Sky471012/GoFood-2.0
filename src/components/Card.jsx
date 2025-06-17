@@ -55,7 +55,7 @@ export default function Card(props) {
           <div className="flex align-items-center gap-3">
             <span className="fs-6 " style={{"color":"#e58f00"}}><b>Quantity:</b></span>
             <div className="text-white d-flex flex-wrap">
-              {Array.from({ length: 8 }, (_, i) => (
+              {Array.from({ length: 4 }, (_, i) => (
                 <div key={i + 1} className="form-check me-3">
                   <input
                     className="form-check-input custom-checkbox"
