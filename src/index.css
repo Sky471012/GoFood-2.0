@@ -1,52 +1,7 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  padding-top: 70px;
-}
-
-.logo{
-  height: 45px;
-}
-
-#carouselExampleFade img{
-  max-height: 470px;
-}
-
-.custom-hover-shadow {
-  transition: border 0.3s ease;
-}
-
-.custom-hover-shadow:hover {
-  box-shadow: 0 0 15px rgba(0, 188, 140, 255);
-  border: 1px solid rgba(0, 188, 140, 255);
-}
-
-.navbar .btn:hover{
-  background-color: rgba(0, 188, 140, 255) !important;
-  color: white !important;
-  border: 1px solid white;
-}
-
-.cart .btn:hover{
-  background-color: white !important;
-  color: rgba(0, 188, 140, 255) !important;
-  border: 1px solid rgba(0, 188, 140, 255);
-}
-
-#cart-root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050; /* or higher than navbar */
-  width: 100%;
-}
-

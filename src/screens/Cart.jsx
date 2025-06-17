@@ -10,7 +10,7 @@ export default function Cart() {
     if(data.length === 0){
         return(
             <div className="m-5 d-flex justify-content-center fs-3">
-                The Cart is empty.
+                The Cart is empty!
             </div>
         )
     }
@@ -43,17 +43,17 @@ export default function Cart() {
     let totalPrice = data.reduce((total, food) => total + food.price, 0)
 
   return (
-    <div>
-      <div className='container m-auto mt-5 table-responsive-sm table-responsive-md'>
-        <table className='table table-hover '>
-          <thead className='fs-5'>
+    <div className='container cart-container m-auto mt-5'>
+      <div className='table-responsive-sm table-responsive-md' style={{maxHeight: '400px', overflowY: 'auto'}}>
+        <table className='table' >
+          <thead className='fs-5' style={{position: 'sticky', top: 0, backgroundColor: '#1d1d23', zIndex: 1}}>
             <tr>
-              <th className='text-success' scope='col ' >#</th>
-              <th className='text-success' scope='col' >Name</th>
-              <th className='text-success' scope='col' >Quantity</th>
-              <th className='text-success' scope='col' >Option</th>
-              <th className='text-success' scope='col' >Amount</th>
-              <th className='text-success' scope='col' ></th>
+              <th className='table-heading' scope='col ' >#</th>
+              <th className='table-heading' scope='col' >Name</th>
+              <th className='table-heading' scope='col' >Quantity</th>
+              <th className='table-heading' scope='col' >Option</th>
+              <th className='table-heading' scope='col' >Amount</th>
+              <th className='table-heading' scope='col' >Remove</th>
             </tr>
           </thead>
           <tbody>
@@ -69,11 +69,11 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        
-        <div className='check-out-div d-flex justify-content-between align-items-center'>
-          <h1 className="fs-2 m-3">Total Price: ₹ {totalPrice}/-</h1>
-          <button className='btn bg-success fw-bold m-3' onClick={handleCheckout}>Check Out</button>
-        </div>
+      </div>
+      
+      <div className='check-out-div d-flex justify-content-between align-items-center fixed-bottom m-4 '>
+        <h1 className="fs-2 m-3" style={{color:"#e58f00"}}>Total Price: ₹ {totalPrice}/-</h1>
+        <button className='btn fw-bold m-3' onClick={handleCheckout}>Check Out</button>
       </div>
     </div>
   )

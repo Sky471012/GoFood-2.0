@@ -5,10 +5,7 @@ dotenv.config();
 
 async function mongoDB() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Successfully connected to MongoDB');
 
     const fetched_data = mongoose.connection.db.collection("food_items");

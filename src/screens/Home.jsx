@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
+import Hero from '../components/hero';
 
 export default function Home() {
 
@@ -30,47 +31,26 @@ export default function Home() {
   return (
     <div>
       <Navbar/>
+      <Hero/>
       
-      {/* Carousel-starts */}
-      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit: "contain !important"}}>
-            <div className="carousel-inner ">
-                <div className="carousel-caption" style={{zIndex:"10"}}>
-                    <div className="d-flex justify-content-center">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
-                    </div>
-                </div>
-                <div className="carousel-item active">
-                    <img src="/burger.jpg" className="d-block w-100" style={{filter: "brightness(50%)", height:"100%", objectFit: "cover"}} alt="Burger" />
-                </div>
-                <div className="carousel-item">
-                    <img src="/pizza.jpg" className="d-block w-100" style={{filter: "brightness(50%)", height:"100%", objectFit: "cover"}} alt="Pizza" />
-                </div>
-                <div className="carousel-item">
-                    <img src="/momos.jpg" className="d-block w-100" style={{filter: "brightness(50%)", height:"100%", objectFit: "cover"}} alt="Momos" />
-                </div>
-            </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-            </button>
+      <div className="search-box d-flex justify-content-center mt-5">
+        <div className="search">
+          <i className="bi bi-search ms-1"></i>
+          <input className="form-control ms-1" type="search" placeholder="Search here......." aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
         </div>
-      {/* Carousel-ends */}
+      </div>
 
 
       {/* Cards-starts */}
-      <div className="container">
+      <div className="container flex">
       {
         foodCat.length > 0 ? (
           foodCat.map((data) => {
             return (
-              <div key={data._id} className='row mb-3'>
-                <div className='fs-3 m-3 fw-bold'>
+              <div key={data._id} className='row mb-3 mt-3 align-items-center'>
+                <h1 className='mt-5 fw-bold' style={{color: "#e58f00"}}>
                   {data.CategoryName}
-                </div>
+                </h1>
                 <hr />
                 {
                   foodItem.length > 0 ? (
@@ -84,14 +64,14 @@ export default function Home() {
                         </div>
                       ))
                   ) : (
-                    <div>No food item</div>
+                    <h2 className='m-5 text-center'> No food item!</h2>
                   )
                 }
               </div>
             );
           })
         ) : (
-          <div>No Food Category</div>
+          <h2 className='m-5 text-center'>No Food Category!</h2>
         )
       }
 

@@ -37,30 +37,30 @@ export default function Signup() {
     setCredentials({...credentials, [event.target.name]:event.target.value})
   }
 
-  return (<div className='d-flex flex-column'>
+  return (<div>
     <Navbar></Navbar>
-    <div className="container my-5 d-flex justify-content-center">
-      <form onSubmit={handleSubmit} className="w-100">
-        <div className="m-3 form-group flex align-content-center w-75 mx-auto">
-          <label className='ms-3 m-2' htmlFor="name">Name</label>
-          <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange}/>
+    <div className="signup-container d-flex justify-content-center">
+      <form onSubmit={handleSubmit} >
+        <div className="m-3 form-group flex align-content-center">
+          <label className='m-2' htmlFor="name">Name:-</label>
+          <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} placeholder='Enter your name....'/>
         </div>
-        <div className="m-3 form-group flex align-content-center w-75 mx-auto">
-          <label className='ms-3 m-2' htmlFor="exampleInputEmail1">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' value={credentials.email} onChange={onChange}/>
+        <div className="m-3 form-group flex align-content-center">
+          <label className='m-2' htmlFor="exampleInputEmail1">Email address:-</label>
+          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' value={credentials.email} onChange={onChange} placeholder='Enter your email....'/>
         </div>
-        <div className="m-3 form-group flex align-content-center w-75 mx-auto">
-          <label className='ms-3 m-2' htmlFor="exampleInputPassword1">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" name='password' value={credentials.password} onChange={onChange}/>
+        <div className="m-3 form-group flex align-content-center">
+          <label className='m-2' htmlFor="exampleInputPassword1">Password:-</label>
+          <input type="password" className="form-control" id="exampleInputPassword1" name='password' value={credentials.password} onChange={onChange} placeholder='Enter your password....'/>
         </div>
-        <div className="m-3 form-group flex align-content-center w-75 mx-auto">
-          <label className='ms-3 m-2' htmlFor="address">Address</label>
-          <input type="text" className="form-control" name='address' value={credentials.address} onChange={onChange}/>
+        <div className="m-3 form-group flex align-content-center">
+          <label className='m-2' htmlFor="address">Address:-</label>
+          <input type="text" className="form-control" name='address' value={credentials.address} onChange={onChange} placeholder='Enter your address....'/>
         </div>   
 
         <div className='d-flex justify-content-center gap-3'>
-          <Link to="/login" className='m-3 btn btn-danger fw-bold text-white'>Already a user</Link>  
-          <button type="submit" className="m-3 btn btn-success fw-bold text-white">Signup</button>
+          <Link to="/login" className='m-3 btn btn-not fw-bold'>Already a user</Link>  
+          <button type="submit" className="m-3 btn fw-bold">Signup</button>
         </div>     
       </form>
     </div>
