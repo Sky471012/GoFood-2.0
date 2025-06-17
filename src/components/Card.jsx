@@ -105,7 +105,7 @@ export default function Card(props) {
         </div>
 
         <hr />
-        <div className="d-flex justify-content-center"><button className="btn mx-1 fw-bold" onClick={handleAddToCart}>Add To cart</button></div>
+        <div className="d-flex justify-content-center"><button className="btn mx-1 fw-bold" onClick={handleAddToCart}>Add to Cart</button></div>
         
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function Footer() {
             <li><a href='https://www.linkedin.com/in/aakash-sharma-a178062a7/'><i className="contact-icon bi bi-linkedin"></i></a></li>
             <li><a href='https://www.instagram.com/sky_101247/'><i className="contact-icon bi bi-instagram"></i></a></li>
           </ul>
-          <div className="text-muted mt-3">© 2025 Sky</div>
+          <div className="text-muted mt-3"><i className="bi bi-c-circle"></i> 2025 Sky</div>
     </footer>
   )
 }
