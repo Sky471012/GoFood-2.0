@@ -2,55 +2,57 @@
   font-family: "Aachen BT Roman";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen BT Roman"), url("Aachen Roman font.woff") format("woff");
+  src: local("Aachen BT Roman"), url("/fonts/Aachen Roman font.woff") format("woff");
 }
 
 @font-face {
   font-family: "Aachen BT Roman";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen BT Roman"), url("aachenn.woff") format("woff");
+  src: local("Aachen BT Roman"), url("/fonts/aachenn.woff") format("woff");
 }
 
 @font-face {
   font-family: "Aachen BT Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen BT Bold"), url("Aachen BT Bold font.woff") format("woff");
+  src: local("Aachen BT Bold"), url("/fonts/Aachen BT Bold font.woff") format("woff");
 }
 
 @font-face {
   font-family: "Aachen-Light Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen-Light Regular"), url("AACHEN.woff") format("woff");
+  src: local("Aachen-Light Regular"), url("/fonts/AACHEN.woff") format("woff");
 }
 
 @font-face {
   font-family: "AachenDEEMed Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("AachenDEEMed Regular"), url("AE01014D.woff") format("woff");
+  src: local("AachenDEEMed Regular"), url("/fonts/AE01014D.woff") format("woff");
 }
 
 @font-face {
   font-family: "Aachen Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen Regular"), url("Aachen Regular font.woff") format("woff");
+  src: local("Aachen Regular"), url("/fonts/Aachen Regular font.woff") format("woff");
 }
 
 @font-face {
   font-family: "Aachen Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Aachen Bold"), url("unicode.aachenb.woff") format("woff");
+  src: local("Aachen Bold"), url("/fonts/unicode.aachenb.woff") format("woff");
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #1d1d23 !important;
+  font-family: "Aachen BT Roman", sans-serif !important;
+
 }
 
 .btn {
@@ -151,7 +153,7 @@ body {
   font-weight: 700;
   color: #e58f00;
   margin-bottom: 20px;
-  font-family: "Aachen BT Roman", sans-serif !important;
+  font-family: "Aachen BT Bold", sans-serif !important;
   line-height: 1.2;
 }
 
