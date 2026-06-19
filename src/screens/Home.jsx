@@ -11,17 +11,23 @@ export default function Home() {
   const [foodItem, setFoodItem] = useState([]);
 
   const loadData = async ()=>{
-    let response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/foodData`,{
-      method : "POST",
-      headers : {
-        'Content-Type' : 'application/json'
-      }
-    });
+    try {
+      let response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/foodData`,{
+        method : "POST",
+        headers : {
+          'Content-Type' : 'application/json'
+        }
+      });
 
-    response = await response.json();
+      response = await response.json();
 
-    setFoodItem(response[0]);
-    setFoodCat(response[1]);
+      setFoodItem(Array.isArray(response?.[0]) ? response[0] : []);
+      setFoodCat(Array.isArray(response?.[1]) ? response[1] : []);
+    } catch (error) {
+      console.error("Failed to load food data:", error);
+      setFoodItem([]);
+      setFoodCat([]);
+    }
   }
 
   useEffect(()=>{
@@ -44,7 +50,7 @@ export default function Home() {
       {/* Cards-starts */}
       <div className="container flex">
       {
-        foodCat.length > 0 ? (
+        foodCat?.length > 0 ? (
           foodCat.map((data) => {
             return (
               <div key={data._id} className='row mb-3 mt-3 align-items-center'>
@@ -53,7 +59,7 @@ export default function Home() {
                 </h1>
                 <hr />
                 {
-                  foodItem.length > 0 ? (
+                  foodItem?.length > 0 ? (
                     foodItem
                       .filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase()))) 
                       .map((filterItems) => (
