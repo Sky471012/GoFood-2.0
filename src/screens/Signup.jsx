@@ -27,7 +27,7 @@ export default function Signup() {
       }
     }else{
       console.log("Signuped");
-      console.log(localStorage.setItem("authToken", json.authToken));
+      localStorage.setItem("userEmail", credentials.email);
       navigate("/")
     }
 
