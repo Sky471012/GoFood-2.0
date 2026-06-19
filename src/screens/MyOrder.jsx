@@ -64,7 +64,7 @@ export default function MyOrder() {
                                     </div>
                                     <div className="card-container flex w=100">
                                       <span className="d-flex ms-1 fs-6">
-                                        Quntity : <span className='fw-bold ms-1'>{item.qty}</span>
+                                        Quantity : <span className='fw-bold ms-1'>{item.qty}</span>
                                       </span>
                                       <span className="d-flex ms-1 fs-6">
                                         Size : <span className='fw-bold ms-1'>{item.size}</span>
